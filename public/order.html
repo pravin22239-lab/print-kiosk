@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>PrintPoint — Your Print Order</title>
+<title>Flash ink — Your Print Order</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
@@ -126,7 +126,7 @@
 </head>
 <body>
   <div class="receipt">
-    <div class="eyebrow">PrintPoint</div>
+    <div class="eyebrow">Flash ink</div>
     <h1>Build your print order</h1>
 
     <div class="field">
@@ -303,7 +303,7 @@
         amount: order.amount,
         currency: order.currency,
         order_id: order.orderId,
-        name: 'PrintPoint Kiosk',
+        name: 'Flash ink Kiosk',
         description: 'Print job payment',
         method: { upi: true, card: true, netbanking: true },
         handler: async function (response) {
