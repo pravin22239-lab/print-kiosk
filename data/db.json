@@ -1,4 +1,8 @@
 {
   "sessions": {},
-  "orders": {}
+  "orders": {},
+  "rates": {
+    "bw": 2,
+    "color": 10
+  }
 }
