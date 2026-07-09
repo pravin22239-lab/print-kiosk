@@ -8,7 +8,7 @@ const QRCode = require('qrcode');
 const Razorpay = require('razorpay');
 const cors = require('cors');
 const { nanoid } = require('nanoid');
-const pdfParse = require('pdf-parse');
+const pdfParse = require('const pdfParse = require(...)');
 const mammoth = require('mammoth');
 
 const app = express();
