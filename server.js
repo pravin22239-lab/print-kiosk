@@ -174,9 +174,10 @@ app.post('/api/upload/:sessionId', upload.single('file'), async (req, res) => {
 function calcPrice(rates, options) {
   // Flat per-copy pricing: rate is charged once per copy, regardless of page count.
   // e.g. 10 copies @ ₹2 = ₹20 (NOT rate × pages × copies).
-  const perCopy = options.color === 'color' ? rates.color : rates.bw;
-  const copies = Math.max(1, parseInt(options.copies, 10) || 1);
-  let total = perCopy * copies;
+  const rate = options.color === 'color' ? rates.color : rates.bw;
+const pages = Math.max(1, parseInt(options.pages, 10) || 1);
+const copies = Math.max(1, parseInt(options.copies, 10) || 1);
+let total = rate * pages * copies;
   if (options.sides === 'double') total = Math.ceil(total * 0.6); // rough double-side discount
   return Math.round(total);
 }
